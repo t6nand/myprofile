@@ -23,12 +23,12 @@ app.use(express.static(path.join(__dirname + '/../views')));
 
 app.get('/', function(req,res) {
     res.redirect('/profile');
-})
+});
 // index page 
 app.get('/profile', function(req, res) {
     res.render('index');
 });
-app.get('/index.ejs'), function(req, res) {
+app.get('/index.ejs', function(req, res) {
 	res.redirect('/');
 });
 
