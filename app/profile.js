@@ -28,7 +28,10 @@ app.get('/', function(req,res) {
 app.get('/profile', function(req, res) {
     res.render('index');
 });
+app.get('/index.ejs'), function(req, res) {
+	res.redirect('/');
+});
 
-app.listen(3000);
+app.listen(4000);
 
 console.log('MyProfile listening on 4000.');
