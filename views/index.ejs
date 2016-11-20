@@ -283,28 +283,21 @@
     <!-- /About -->
     <style type="text/css">
     div.projects {
-        background-color: rgba(240,252,242, 0.4);
-    }
-    </style>
-    <div class="projects" id="myProjetcs">
-        <br>
-        <br>
-        <h3 class="text-center slideanim">My Projects</h3>
-        <br>
-        <br>
-        <style> 
-            h3.content-text {
-                text-align: center;
-                text-decoration: underline;
-            }
-            p.content-text {
-                word-spacing: 5px;
-            }
+  background - color : rgba(240, 252, 242, 0.4);
+}
+</ style><div class = "projects" id =
+              "myProjetcs"><br><br><h3 class = "text-center slideanim">
+        My Projects</ h3><br><br><style> h3.content -
+    text {
+  text - align : center;
+  text - decoration : underline;
+}
+p.content - text { word - spacing : 5px; }
         </style>
         <div>
             <h3 class="content-text">Image Processing Application - Roposo (Currently Working)</h3>
             <p class="content-text">
-                We call it Peter Parker. This project aims at development of Image Processing application, using java play framework for optimising and various media content type of our community of fashionistas and style bloggers for usage on app and web. This also involves analysing originality of content and important feature detection like face detection, for implementing reverse image search. This project involves working with AWS EC2, SQS, Java play framework, python, bash and git, image processing library openCV, image magick and AWS Elastic Transcoding.
+                We call it Peter Parker. This project aims at development of Image Processing application, using java play framework for optimising various media content type of our community of fashionistas and style bloggers for usage on mobile app and web. This also involves analysing originality of content, image compression, video transcoding and important feature detection like face detection, product detection, etc.  for implementing reverse image search. This project involves working with technologies like AWS EC2, SQS, Java play framework, python, bash and git, image processing library openCV, image magick and AWS Elastic Transcoding.
             </p>
         </div>
         <br>
@@ -423,11 +416,8 @@
     <script>
         $(window).load(function() {
 
-            // Slideshow for banner
-            $("#slider").responsiveSlides({
-                maxwidth: 1920,
-                speed: 1000
-            });
+  // Slideshow for banner
+  $("#slider").responsiveSlides({maxwidth : 1920, speed : 1000});
 
 
         });
@@ -448,22 +438,22 @@
 
     <script>
         $(document).ready(function() {
-            // Add smooth scrolling to all links in navbar + footer link
-            $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
 
-                // Store hash
-                var hash = this.hash;
+    // Store hash
+    var hash = this.hash;
 
-                // Using jQuery's animate() method to add smooth page scroll
-                // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 900, function() {
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes
+    // to scroll to the specified area
+    $('html, body')
+        .animate({scrollTop : $(hash).offset().top}, 900, function() {
 
-                    // Add hash (#) to URL when done scrolling (default click behavior)
-                    window.location.hash = hash;
-                });
-            });
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+  });
         })
     </script>
     <!-- /js for smooth scrolling -->
@@ -471,14 +461,14 @@
 
     <script>
         $(window).scroll(function() {
-            $(".slideanim").each(function() {
-                var pos = $(this).offset().top;
+  $(".slideanim").each(function() {
+    var pos = $(this).offset().top;
 
-                var winTop = $(window).scrollTop();
-                if (pos < winTop + 600) {
-                    $(this).addClass("slide");
-                }
-            });
+    var winTop = $(window).scrollTop();
+    if (pos < winTop + 600) {
+      $(this).addClass("slide");
+    }
+  });
         });
     </script>
     <!-- /js for sliding -->
