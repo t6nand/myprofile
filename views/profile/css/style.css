@@ -25,9 +25,9 @@ input[type="button"],input[type="submit"]{
 	-ms-transition:0.5s all;
 }
 h1,h2,h3,h4,h5,h6{
-	margin:0;	
+	margin:0;
 	padding:0;
-}	
+}
 p{
 	margin:0;
 }
@@ -166,7 +166,7 @@ body {
 }
 /*-- /link-effect --*/
 .banner {
-	background:url(../images/banner.jpg) no-repeat;
+	background:url(../images/banner.png) no-repeat;
 	background-position:center;
 	background-size:cover;
 	-webkit-background-size:cover;
@@ -177,7 +177,7 @@ body {
 /*-- slider --*/
 .banner .rslides {
 	height:925px;
-} 
+}
 .rslides {
 	position: relative;
 	list-style: none;
@@ -265,7 +265,7 @@ span.line2 {
 	display:block;
 	background-color:#fff;
 	margin:0 auto;
-} 
+}
 /*-- /banner --*/
 /*-- About me --*/
 .about-me {
@@ -335,7 +335,7 @@ img.img-responsive {
 	line-height:25px;
 	font-weight:bold;
 }
-.myskills p {	
+.myskills p {
 	padding:25px 37px;
 	font-size:17px;
 	line-height:25px;
@@ -536,7 +536,7 @@ textarea.form-control {
     border-color:transparent;
     outline: 0;
     -webkit-box-shadow: none;
-    box-shadow:none; 
+    box-shadow:none;
 }
 .contact-me button.btn.btn-default.btn-lg {
 	background-color:#A1B3A4;
@@ -638,29 +638,29 @@ footer span.glyphicon.glyphicon-chevron-up {
 .slide {
     /* The name of the animation */
     animation-name: slide;
-    -webkit-animation-name: slide; 
+    -webkit-animation-name: slide;
     /* The duration of the animation */
-    animation-duration: 1s; 
+    animation-duration: 1s;
     -webkit-animation-duration: 1s;
     /* Make the element visible */
-    visibility: visible; 
+    visibility: visible;
 }
 /* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
 @keyframes slide {
     0% {
         opacity: 0;
         -webkit-transform: translateY(70%);
-    } 
+    }
     100% {
         opacity: 1;
         -webkit-transform: translateY(0%);
-    } 
+    }
 }
 @-webkit-keyframes slide {
     0% {
         opacity: 0;
         -webkit-transform: translateY(70%);
-    } 
+    }
     100% {
         opacity: 1;
         -webkit-transform: translateY(0%);
@@ -670,7 +670,7 @@ footer span.glyphicon.glyphicon-chevron-up {
 /*---- responsive-design -----*/
 @media (max-width: 1600px) {
 	.banner {
-	min-height:795px;	
+	min-height:795px;
 	}
 	.banner .rslides {
 	height:795px;
@@ -840,15 +840,15 @@ footer span.glyphicon.glyphicon-chevron-up {
     height: 220px;
 }
 	.about-me h3.text-center {
-	padding: 65px 0 40px;	
+	padding: 65px 0 40px;
 }
 	.about-me .myskills h3.text-center {
-	padding:20px 0 10px;	
+	padding:20px 0 10px;
 }
 	.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
     margin-left: 5px;
 }
-	.navbar-nav { 
+	.navbar-nav {
 	background-color:rgba(0,0,0,0.77);
 	text-align:center;
 }
@@ -892,20 +892,20 @@ footer span.glyphicon.glyphicon-chevron-up {
     margin: 45px 0 0 165px;
 }
 	.banner-info h3 {
-	padding:60px 0 10px;		
+	padding:60px 0 10px;
 }
 	.banner-info p {
 	font-size:17px;
 }
 	span.line1 , span.line2 {
 	width:242px;
-}	
+}
 	.content-img {
     height: 374px;
 }
 	.myportfolio p.content-text {
-	padding:0 50px 100px;	
-}	
+	padding:0 50px 100px;
+}
 }
 
 @media (max-width: 600px){
@@ -941,7 +941,7 @@ footer span.glyphicon.glyphicon-chevron-up {
 @media (max-width: 480px){
 	.banner-info h3 {
 	font-size:25px;
-}	
+}
 	.banner-info {
     margin: 20px 0 0 97px;
 }
@@ -953,7 +953,7 @@ footer span.glyphicon.glyphicon-chevron-up {
 	font-size:25px;
 }
 .mydetails h3 {
-	font-size:18px;	
+	font-size:18px;
 }
 .mydetails p {
     font-size: 16px;
@@ -1012,7 +1012,7 @@ footer span.glyphicon.glyphicon-chevron-up {
 }
 	input#name,input#email {
 	height:45px;
-} 
+}
 }
 
 @media (max-width: 384px) {
@@ -1069,10 +1069,10 @@ footer span.glyphicon.glyphicon-chevron-up {
 }
 	.myportfolio p{
 	font-size:15px;
-}	
+}
 	.myportfolio h3.content-text {
 	font-size:20px;
-}	
+}
 	.content-img {
     height: 215px;
 }
@@ -1095,7 +1095,7 @@ footer span.glyphicon.glyphicon-chevron-up {
 	padding-top:1em;
 }
 	hr {
-	margin-top:20px;	
+	margin-top:20px;
 }
 	.about-me .myskills h3.text-center {
     padding: 10px 0 10px;
@@ -1123,5 +1123,3 @@ footer span.glyphicon.glyphicon-chevron-up {
     padding-bottom: 10px;
 }
 }
-
-
