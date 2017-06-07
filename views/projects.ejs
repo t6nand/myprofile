@@ -1,181 +1,189 @@
 <!DOCTYPE HTML>
 <html lang="en">
-
-<head>
-    <title>Projects</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Tapan Sharma: My Profile" />
-    <!-- css -->
-    <link href="/profile/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/profile/css/cobox.css" rel="stylesheet" type="text/css">
-    <link href="/profile/css/portfolio.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/profile/css/style.css" rel="stylesheet" type="text/css" media="all">
-    <!-- /css -->
-    <!-- fonts -->
-    <link href='//fonts.googleapis.com/css?family=Quicksand:400,700,300' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Cinzel:400,700,900' rel='stylesheet' type='text/css'>
-    <!-- /fonts -->
-</head>
-
-<body id="chanakya-projects">
-    <!-- Navigation Bar -->
-    <div class="navbar-wrapper">
-        <div class="container">
-            <nav class="navbar navbar-inverse navbar-static-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                    <div id="navbar" class="navbar-collapse collapse navbar-right">
-                        <ul class="nav navbar-nav link-effect">
-                            <li>
-                                <a href="/">
-                                    <bold>
-                                        <font color="red">Home</font>
-                                    </bold>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/profile">
-                                    <bold>
-                                        <font color="red">Profile</font>
-                                    </bold>
-                                </a>
-                            </li>
-                            <li class="active">
-                                <a href="#">
-                                    <bold>
-                                        <font color="red">Projects</font>
-                                    </bold>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/contactme">
-                                    <bold>
-                                        <font color="red">Contact</font>
-                                    </bold>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
-    <!-- Projects -->
-    <div class="myprojects" id="projects">
-        <h3 class="text-center">"उद्यमेन हि सिध्यन्ति कार्याणि न मनोरथैः"</h3>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-xs-16">
-                    <div class="myskills">
-                        <div>
-                            <h3 class="content-text">Image Processing</h3>
-                            <ul style="list-style: none;">
-                                <li> Image Segmentation for foreground(Region of Interest) separation from background in digital images. Implemented non interactive segmentation using:
-                                    <ol>
-                                        <li> <a href="https://en.wikipedia.org/wiki/GrabCut">Grab Cut.</a>
-                                        </li>
-                                        <li>Edge Detection and approximating contour of RoI (foreground) for segmentation.</li>
-                                        <li>Binary Thresholding of digital images for quick mask based segmentation.</li>
-                                    </ol>
-                                </li>
-                                <br>
-                                <li> Dominant Colour detection in digital images. Implemented techniques:
-                                    <ol>
-                                        <li> Histogram based colour frequency calculation by converting image in human compatible HSV colour space. Filtering out colours with high frequency of occurrence as dominant colours.</li>
-                                        <li> Colour data clustering using
-                                            <bold> K Means</bold>. Segmented cluster centroids were used to approximate RGB values and classified as dominant colours.</li>
-                                    </ol>
-                                </li>
-                                <br>
-                                <li>Out of focus Detection in digital images:
-                                    <ol>
-                                        <li>Calculated various figure of merits classified as local (pertaining to individual block in image) as well as Global (calculated using local figure of merits) and worked implementation of feedback based tunable decision tree to detect if image is in focus or not.</li>
-                                        <li> Most work in this regard was based on research paper published by <a href="http://hplabs.hp.com/techreports/2005/HPL-2005-14.pdf">Lim, Wu, Yen</a> from HP Image Labs.</li>
-                                    </ol>
-                                </li>
-                                <br>
-                                <li> Implemented image processing backend java application using play framework at Roposo:
-                                    <ol>
-                                        <li> Capable of handling upto 500,000 images per instance per day.</li>
-                                        <li> Capable of resizing, perform compression, transcoding (whenever transcoding provided better results than compression for e.g. <a href="https://developers.google.com/speed/webp/">Webp</a>).</li>
-                                        <li> Capable of transcoding user uploaded videos to formats providing more compression benefit. Used FFMPEG for transcoding to formats like <a href="https://www.webmproject.org/">Webm</a>, optimised MP4, etc.</li>
-                                        <li> Uses most popular Image Processing and Computer Vision libraries like, OpenCV, MetadataExtractor, Libjpeg 9-c, Libpng, libwebp, gifsicle, imagemagick, exiftool, etc. </li>
-                                    </ol>
-                                    <ol>This involved working with AWS services like S3, SQS, Elastic Transcoder, CloudFront. For backend database MongoDB was used. This project also involved development of various testing modules using nodejs and bash for visual verification of experiments conducted. </ol>
-                                </li>
-                            </ul>
-                            </p>
-                        </div>
-                        <br>
-                        <br>
-                        <div>
-                            <h3 class="content-text">Web Crawling</h3>
-                                <ul style="list-style: none;">
-                                    <li>Worked on design of scalable web crawler at Roposo, using node.js and various build tools like Apache Kafka, Docker and Mesos cluster. This project was a part of monitisation, enabling our users to search and purchase for curated products.
-                                    </li>
-                                </ul>
-                        </div>
-                        <br>
-                        <br>
-                        <div>
-                            <h3 class="content-text">Analysing performance of nuclear reactor's instrumentaion - Bhabha Atomic Research Center (BARC)</h3>
-                                <ul style="list-style: none;">
-                                    <li>Analysed instrumentation required in nuclear reactors, researched on extremely low current driving capabilities of op-amp amplifiers and development of such models. Analysed Mock Instrumentation Circuits: Sorted and Hacked in effort to come out with what an unknown circuit did.
-                                    </li>
-                                </ul>
-                        </div>
-                        <br>
-                        <br>
-                        <div>
-                            <h3 class="content-text">Electronic Support System For Speech Impairment (IEDC FUNDED) - NIT Hamirpur, H.P.</h3>
-                                <ul style="list-style: none;">
-                                    <li>Worked on IEDC (Innovation and Enterprenurship Development Center) funded project aimed at developing electronic support system for speech impaired people.
-                                    </li>
-                                    <ol>
-                                        <li> This project involved working with sensor networks along with on board signal processing and microcontroller device.</li>
-                                        <li> Programmed MSP-430 for digitalising sensor signals, filtering them and finally look up for gestures signatures in a look up table.
-                                        </li>
-                                        <li> With this project we were able to identify gestures in seven different orientations which could be tuned to be used with different sign languages.
-                                        </li>
-                                        <li> The final version of the product could decypher around 50 signs of most importance in Indian Sign Language.</li>
-                                    </ol>
-                                </ul>
-                        </div>
-                        <br>
-                        <br>
-                        <div>
-                            <h3 class="content-text">Home Automation</h3>
-                                <ul style="list-style: none;">
-                                    <li>Worked on Home Automation project based on ARM M0 and M3 MCUs.
-                                    </li>
-                                    <ol>
-                                        <li>Controlled nearly all appliances of room using wifi and bluetooth.</li>
-                                        <li>Used wireless sensor networks for automating various appliances like gysers, AC, etc.</li>
-                                        <li>Used DTMF and GPRS modules for long range controlling of devices.</li>
-                                    </ol>
-                                </ul>
-                            </center>
-                        </div>
-                    </div>
-                </div>
+   <head>
+      <title>Projects</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="keywords" content="Tapan Sharma: My Profile" />
+      <!-- css -->
+      <link href="/profile/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+      <link href="/profile/css/cobox.css" rel="stylesheet" type="text/css">
+      <link href="/profile/css/portfolio.css" rel="stylesheet" type="text/css" media="all">
+      <link href="/profile/css/style.css" rel="stylesheet" type="text/css" media="all">
+      <!-- /css -->
+      <!-- fonts -->
+      <link href='//fonts.googleapis.com/css?family=Quicksand:400,700,300' rel='stylesheet' type='text/css'>
+      <link href='//fonts.googleapis.com/css?family=Cinzel:400,700,900' rel='stylesheet' type='text/css'>
+      <!-- /fonts -->
+   </head>
+   <body id="chanakya-projects">
+     <!-- Navigation Bar -->
+     <div class="navbar-wrapper">
+         <div class="container">
+             <nav class="navbar navbar-inverse navbar-static-top">
+                 <div class="container">
+                     <div class="navbar-header">
+                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                             <span class="sr-only">Toggle navigation</span>
+                             <span class="icon-bar"></span>
+                             <span class="icon-bar"></span>
+                             <span class="icon-bar"></span>
+                         </button>
+                     </div>
+                     <div id="navbar" class="navbar-collapse collapse navbar-right">
+                         <ul class="nav navbar-nav link-effect">
+                             <li>
+                               <a href="/">
+                                 <bold>
+                                   <font color="red">Home</font>
+                                 </bold>
+                               </a>
+                             </li>
+                             <li>
+                               <a href="/profile">
+                                 <bold>
+                                   <font color="red">Profile</font>
+                                 </bold>
+                               </a>
+                             </li>
+                             <li class="active">
+                               <a href="#">
+                                 <bold>
+                                   <font color="red">Projects</font>
+                                 </bold>
+                              </a>
+                             </li>
+                             <li>
+                               <a href="contactme">
+                                <bold>
+                                   <font color="red">Contact</font>
+                                </bold>
+                               </a>
+                             </li>
+                         </ul>
+                     </div>
+                 </div>
+             </nav>
+         </div>
+     </div>
+     <br>
+     <br>
+     <br>
+     <br>
+      <!-- Projects -->
+      <div class="myprojects" id="projects">
+         <h3 class="text-center">"उद्यमेन हि सिध्यन्ति कार्याणि न मनोरथैः"</h3>
+         <div class="container">
+         <div class="row">
+         <div class="col-md-12 col-xs-12">
+            <div class="myskills">
+               <div>
+                  <h3 class="content-text">Image Processing</h3>
+                  <ul style="list-style: none;">
+                     <li>
+                        Image Segmentation for foreground(Region of Interest) separation from background in digital images. Implemented non interactive segmentation using:
+                        <ol>
+                           <li> <a href="https://en.wikipedia.org/wiki/GrabCut">Grab Cut.</a>
+                           </li>
+                           <li>Edge Detection and approximating contour of RoI (foreground) for segmentation.</li>
+                           <li>Binary Thresholding of digital images for quick mask based segmentation.</li>
+                        </ol>
+                     </li>
+                     <br>
+                     <li>
+                        Dominant Colour detection in digital images. Implemented techniques:
+                        <ol>
+                           <li> Histogram based colour frequency calculation by converting image in human compatible HSV colour space. Filtering out colours with high frequency of occurrence as dominant colours.</li>
+                           <li>
+                              Colour data clustering using
+                              <bold> K Means</bold>
+                              . Segmented cluster centroids were used to approximate RGB values and classified as dominant colours.
+                           </li>
+                        </ol>
+                     </li>
+                     <br>
+                     <li>
+                        Out of focus Detection in digital images:
+                        <ol>
+                           <li>Calculated various figure of merits classified as local (pertaining to individual block in image) as well as Global (calculated using local figure of merits) and worked implementation of feedback based tunable decision tree to detect if image is in focus or not.</li>
+                           <li> Most work in this regard was based on research paper published by <a href="http://hplabs.hp.com/techreports/2005/HPL-2005-14.pdf">Lim, Wu, Yen</a> from HP Image Labs.</li>
+                        </ol>
+                     </li>
+                     <br>
+                     <li>
+                        Implemented image processing backend java application using play framework at Roposo:
+                        <ol>
+                           <li> Capable of handling upto 500,000 images per instance per day.</li>
+                           <li> Capable of resizing, perform compression, transcoding (whenever transcoding provided better results than compression for e.g. <a href="https://developers.google.com/speed/webp/">Webp</a>).</li>
+                           <li> Capable of transcoding user uploaded videos to formats providing more compression benefit. Used FFMPEG for transcoding to formats like <a href="https://www.webmproject.org/">Webm</a>, optimised MP4, etc.</li>
+                           <li> Uses most popular Image Processing and Computer Vision libraries like, OpenCV, MetadataExtractor, Libjpeg 9-c, Libpng, libwebp, gifsicle, imagemagick, exiftool, etc. </li>
+                        </ol>
+                        <ol>This involved working with AWS services like S3, SQS, Elastic Transcoder, CloudFront. For backend database MongoDB was used. This project also involved development of various testing modules using nodejs and bash for visual verification of experiments conducted. </ol>
+                     </li>
+                  </ul>
+                  </p>
+               </div>
+               <br>
+               <br>
+               <div>
+                  <h3 class="content-text">Web Crawling</h3>
+                  <ul style="list-style: none;">
+                     <li>Worked on design of scalable web crawler at Roposo, using node.js and various build tools like Apache Kafka, Docker and Mesos cluster. This project was a part of monitisation, enabling our users to search and purchase for curated products.
+                     </li>
+                  </ul>
+               </div>
+               <br>
+               <br>
+               <div>
+                  <h3 class="content-text">Analysing performance of nuclear reactor's instrumentaion - Bhabha Atomic Research Center (BARC)</h3>
+                  <ul style="list-style: none;">
+                     <li>Analysed instrumentation required in nuclear reactors, researched on extremely low current driving capabilities of op-amp amplifiers and development of such models. Analysed Mock Instrumentation Circuits: Sorted and Hacked in effort to come out with what an unknown circuit did.
+                     </li>
+                  </ul>
+               </div>
+               <br>
+               <br>
+               <div>
+                  <h3 class="content-text">Electronic Support System For Speech Impairment (IEDC FUNDED) - NIT Hamirpur, H.P.</h3>
+                  <ul style="list-style: none;">
+                     <li>Worked on IEDC (Innovation and Enterprenurship Development Center) funded project aimed at developing electronic support system for speech impaired people.
+                     </li>
+                     <ol>
+                        <li> This project involved working with sensor networks along with on board signal processing and microcontroller device.</li>
+                        <li> Programmed MSP-430 for digitalising sensor signals, filtering them and finally look up for gestures signatures in a look up table.
+                        </li>
+                        <li> With this project we were able to identify gestures in seven different orientations which could be tuned to be used with different sign languages.
+                        </li>
+                        <li> The final version of the product could decypher around 50 signs of most importance in Indian Sign Language.</li>
+                     </ol>
+                  </ul>
+               </div>
+               <br>
+               <br>
+               <div>
+                  <h3 class="content-text">Home Automation</h3>
+                  <ul style="list-style: none;">
+                     <li>Worked on Home Automation project based on ARM M0 and M3 MCUs.
+                     </li>
+                     <ol>
+                        <li>Controlled nearly all appliances of room using wifi and bluetooth.</li>
+                        <li>Used wireless sensor networks for automating various appliances like gysers, AC, etc.</li>
+                        <li>Used DTMF and GPRS modules for long range controlling of devices.</li>
+                     </ol>
+                  </ul>
+                  </center>
+               </div>
             </div>
-        </div>
+         </div>
+       </div>
     </div>
-    <!-- js files -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="/profile/js/bootstrap.min.js"></script>
-
-    <!-- /js files for banner slider -->
-    <!-- js files for portfolio -->
-    <script src="/profile/js/classie.js"></script>
-    <script src="/profile/js/helper.js"></script>
-</body>
+      </div>
+      <!-- js files -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="/profile/js/bootstrap.min.js"></script>
+      <!-- /js files for banner slider -->
+      <!-- js files for portfolio -->
+      <script src="/profile/js/classie.js"></script>
+      <script src="/profile/js/helper.js"></script>
+   </body>
 </html>
