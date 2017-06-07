@@ -1,6 +1,6 @@
 /*
     This server file handles all routing and control which component to show in view for a particular
-    action made in web. 
+    action made in web.
 */
 
 // Native & 3rd party libraries.
@@ -22,14 +22,19 @@ app.use(bodyParser.urlencoded({
 app.use(express.static(path.join(__dirname + '/../views')));
 
 app.get('/', function(req,res) {
-    res.redirect('/profile');
+    res.render('index.ejs');
 });
-// index page 
-app.get('/profile', function(req, res) {
-    res.render('index');
+// index page
+app.get('/profile', function(req,res) {
+    res.render('profile.ejs');
 });
-app.get('/index.ejs', function(req, res) {
-	res.redirect('/');
+
+app.get('/projects', function(req,res) {
+    res.render('projects.ejs');
+});
+
+app.get('/contactme', function(req,res) {
+    res.render('contactme.ejs');
 });
 
 app.listen(4000);
