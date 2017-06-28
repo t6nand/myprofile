@@ -10,7 +10,7 @@ var express = require('express');
 var ejs = require('ejs');
 var path = require('path');
 var app = express();
-
+var pictures = require(__dirname + '/controllers/pictures');
 process.setMaxListeners(0);
 
 // set the view engine to ejs
@@ -30,7 +30,20 @@ app.get('/projects', function(req, res) { res.render('projects.ejs'); });
 
 app.get('/contactme', function(req, res) { res.render('contactme.ejs'); });
 
+app.get('/hostedProjects',
+        function(req, res) { res.render('hostedProjects.ejs'); });
+
+app.get('/displayBlurResults', function(req, res) {
+  res.render('displayBlurResults.ejs', {
+    filePath : pictures.filePath,
+    fromDecisionTree : pictures.fromDecisionTree,
+    confidenceFromDecisionTree : pictures.confidenceFromDecisionTree,
+    fromWaveletTransform : pictures.fromWaveletTransform,
+    confidenceFromWaveletTransform : pictures.confidenceFromWaveletTransform,
+    isBlurred : pictures.isBlurred
+  });
 });
+app.post('/picupload', pictures.type, pictures.saveImageLocallly);
 
 app.listen(4000);
 
