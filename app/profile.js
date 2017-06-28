@@ -1,5 +1,6 @@
 /*
-    This server file handles all routing and control which component to show in view for a particular
+    This server file handles all routing and control which component to show in
+   view for a particular
     action made in web.
 */
 
@@ -15,28 +16,24 @@ process.setMaxListeners(0);
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
+app.use(bodyParser.urlencoded({extended : true}));
 
 app.use(express.static(path.join(__dirname + '/../views')));
 
-app.get('/', function(req,res) {
-    res.render('index.ejs');
-});
+// app.use(multer({ dest: __dirname + '/../upload'}).single('userPhoto'));
+
+app.get('/', function(req, res) { res.render('index.ejs'); });
 // index page
-app.get('/profile', function(req,res) {
-    res.render('profile.ejs');
-});
+app.get('/profile', function(req, res) { res.render('profile.ejs'); });
 
-app.get('/projects', function(req,res) {
-    res.render('projects.ejs');
-});
+app.get('/projects', function(req, res) { res.render('projects.ejs'); });
 
-app.get('/contactme', function(req,res) {
-    res.render('contactme.ejs');
+app.get('/contactme', function(req, res) { res.render('contactme.ejs'); });
+
 });
 
 app.listen(4000);
 
 console.log('MyProfile listening on 4000.');
+
+module.exports.express;
