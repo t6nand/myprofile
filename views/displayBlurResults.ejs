@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html lang="en">
+   <head>
+      <title>BLUR ANALYSIS</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="keywords" content="Tapan Sharma: Hosted Projects" />
+      <!-- css -->
+      <link href="/profile/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+      <link href="/profile/css/cobox.css" rel="stylesheet" type="text/css">
+      <link href="/profile/css/portfolio.css" rel="stylesheet" type="text/css" media="all">
+      <link href="/profile/css/style.css" rel="stylesheet" type="text/css" media="all">
+      <!-- /css -->
+      <!-- fonts -->
+      <link href='//fonts.googleapis.com/css?family=Quicksand:400,700,300' rel='stylesheet' type='text/css'>
+      <link href='//fonts.googleapis.com/css?family=Cinzel:400,700,900' rel='stylesheet' type='text/css'>
+      <!-- /fonts -->
+   </head>
+   <body id="chanakya-projects" onload="insertText();">
+     <!-- Navigation Bar -->
+     <div class="navbar-wrapper">
+         <div class="container">
+             <nav class="navbar navbar-inverse navbar-static-top">
+                 <div class="container">
+                     <div class="navbar-header">
+                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                             <span class="sr-only">Toggle navigation</span>
+                             <span class="icon-bar"></span>
+                             <span class="icon-bar"></span>
+                             <span class="icon-bar"></span>
+                         </button>
+                     </div>
+                     <div id="navbar" class="navbar-collapse collapse navbar-right">
+                         <ul class="nav navbar-nav link-effect">
+                             <li>
+                               <a href="/">
+                                 <b>
+                                  <p style="color:red;">
+                                   Home
+                                 </p>
+                                 </b>
+                               </a>
+                             </li>
+                             <li>
+                               <a href="/profile">
+                                 <b>
+                                   <p style="color:red;">Profile</p>
+                                 </b>
+                               </a>
+                             </li>
+                             <li>
+                               <a href="/projects">
+                                 <b>
+                                   <p style="color:red;">Projects</p>
+                                 </b>
+                              </a>
+                             </li>
+                             <li>
+                               <a href="/hostedProjects">
+                                <b>
+                                   <p style="color:red;">Hosted Projects</p>
+                                </b>
+                               </a>
+                             </li>
+                             <li>
+                               <a href="/contactme">
+                                <b>
+                                   <p style="color:red;">Contact</p>
+                                </b>
+                               </a>
+                             </li>
+                         </ul>
+                     </div>
+                 </div>
+             </nav>
+         </div>
+     </div>
+     <br>
+     <br>
+     <br>
+     <br>
+      <!-- Projects -->
+      <div class="myprojects" id="projects">
+         <h3 class="text-center">"सर्वस्य लोचनं शास्त्रं"</h3>
+         <div class="container">
+         <div class="row">
+         <div class="col-md-12 col-xs-12">
+            <div class="myskills">
+               <div>
+                  <h2 class="content-text" style="text-align:center">Blur Detection In Digital Images</h3>
+                  <br>
+                  <p><center> <h3>Uploaded Image</h3> </center></p>
+                    <center><img src="uploads/<%- filePath.toString() %>" width="500" alt=""/></center>
+                    <br>
+                    <br>
+                    <br>
+                      <center><table border="1">
+                      <tr>
+                        <td>Decision From IIR Filter Analysis</td>
+                        <td>Blur Confidence from IIR Filter Analysis</td>
+                        <td>Decision From HAAR Wavelet Transform Technique</td>
+                        <td>Blur Confidence from HAAR Wavelet Transform</td>
+                        <td>BLUR DECISION</td>
+                      </tr>
+                      <tr>
+                        <td id="iirdsn"></td>
+                        <td id="iirconf"></td>
+                        <td id="haardsn"></td>
+                        <td id="haarconf"></td>
+                        <td id="blrdsn"></td>
+                      </tr>
+                    </table>
+                  </center>
+              </div>
+           </div>
+         </div>
+       </div>
+    </div>
+      </div>
+      <!-- js files -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="/profile/js/bootstrap.min.js"></script>
+      <!-- /js files for banner slider -->
+      <!-- js files for portfolio -->
+      <script src="/profile/js/classie.js"></script>
+      <script src="/profile/js/helper.js"></script>
+      <script>
+        function insertText() {
+        document.getElementById("iirdsn").innerHTML = <%- fromDecisionTree %>
+        document.getElementById("iirconf").innerHTML = <%- confidenceFromDecisionTree %>
+        document.getElementById("haardsn").innerHTML = <%- fromWaveletTransform %>
+        document.getElementById("haarconf").innerHTML = <%- confidenceFromWaveletTransform %>
+        document.getElementById("blrdsn").innerHTML = <%- isBlurred %>
+      }
+      </script>
+   </body>
+</html>
