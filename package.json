@@ -1,21 +1,21 @@
 {
-"name" : "myprofile",
-"version" : "0.0.1",
-"description": "This project is aimed at creating my profile on web. Single node where people can know who I am.",
-"main" : "profile.js",
-"author" : "Tapan Sharma",
-"dependencies" : {
-"body-parser" : "latest",
-"bunyan" : "latest",
-"ejs" : "latest",
-"exec": "latest",
-"express" : "latest",
-"morgan" : "latest",
-"multer" : "latest",
-"request" : "latest",
-"url" : "latest"
-},
-"scripts" : {
-"start" : "nohup node app/profile.js &"
-}
+  "name": "myprofile",
+  "version": "0.0.1",
+  "description": "This project is aimed at creating my profile on web. Single node where people can know who I am.",
+  "main": "profile.js",
+  "author": "Tapan Sharma",
+  "dependencies": {
+    "body-parser": "latest",
+    "bunyan": "latest",
+    "ejs": "latest",
+    "exec": "latest",
+    "express": "latest",
+    "morgan": "latest",
+    "multer": "latest",
+    "request": "latest",
+    "url": "latest"
+  },
+  "scripts": {
+    "start": "nohup node app/profile.js &"
+  }
 }
