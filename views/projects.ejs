@@ -80,6 +80,40 @@
          <div class="col-md-12 col-xs-12">
             <div class="myskills">
                <div>
+                  <h3 class="content-text">AI & ML:</h3>
+                  <ul style="list-style: none;">
+                     <li>
+                        <a href="https://github.com/t6nand/source-separation">Source separation using Deep Learning.</a> 
+                        <ul style="padding-left: 20px">
+                           <li>This project presents an implementation and evaluation of an end-to-end system based on deep learning for speech enhancement based audio source separation. 
+                              Speech Enhancement is achieved by predicting and applying a ratio mask to a time-frequency representation of the noisy audio signal and through a subsequent reconstruction of the estimated clean speech signal.
+                              The project compared different implementations of supervised deep learning systems that can learn to enhance speech from background noise in monaural (single microphone) recordings.
+                           </li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="https://github.com/t6nand/mltasks/blob/master/task1.ipynb">CIFAR-10 Dataset Image classification based on CNN</a>
+                     </li>
+                     <li>
+                        <a href="https://github.com/t6nand/mltasks/blob/master/task2.ipynb">MCMC Sampling for a very large data constellation.</a>
+                        <ul style="padding-left: 20px">
+                           <li>
+                              The Markov Chain Monte Carlo sampling is a very efficient method to sample the data from a large contellation size. In this mini project, a MIMO transceiver with N t = N r = 2 and N t = N r = 8 and 16-QAM was considered.
+                              Note that for example if a higher dimensional QAM constellation is considered, calculating the log-likelihood values becomes infeasible. 
+                              For example, for 64-QAM and Nt = 8 antennas we have Nt = 64^8 = 2^48 ≈ 10^14. An approach to circumvent this complexity was demonstrated by using MCMC sampling.
+                              
+                           </li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="https://github.com/t6nand/mltasks/blob/master/task3.ipynb">Unsupervised Learning based blind parameter estimation of a receiver in communication system.</a>
+                        <ul style="padding-left: 20px"> 
+                           <li>
+                              Used K-Means algorithm to first find out the constellation of the communication system. Post, using the K-Means results, initialised the expectation maximization (EM) algorithm to determine the unknown
+                              model parameters and the distribution of the constellation symbols.
+                           </li>
+                        </ul>
+                     </li>
                   <h3 class="content-text">Image Processing</h3>
                   <ul style="list-style: none;">
                      <li>
@@ -117,22 +151,39 @@
                         <ol>
                            <li> Capable of handling upto 500,000 images per instance per day.</li>
                            <li> Capable of resizing, perform compression, transcoding (whenever transcoding provided better results than compression for e.g. <a href="https://developers.google.com/speed/webp/">Webp</a>).</li>
-                           <li> Capable of transcoding user uploaded videos to formats providing more compression benefit. Used FFMPEG for transcoding to formats like <a href="https://www.webmproject.org/">Webm</a>, optimised MP4, etc.</li>
                            <li> Uses most popular Image Processing and Computer Vision libraries like, OpenCV, MetadataExtractor, Libjpeg 9-c, Libpng, libwebp, gifsicle, imagemagick, exiftool, etc. </li>
                         </ol>
-                        <ol>This involved working with AWS services like S3, SQS, Elastic Transcoder, CloudFront. For backend database MongoDB was used. This project also involved development of various testing modules using nodejs and bash for visual verification of experiments conducted. </ol>
+                        <ol>This involved working with AWS services like S3, SQS, CloudFront. For backend database MongoDB was used. This project also involved development of various testing modules using python, nodejs and bash for visual verification of experiments conducted. </ol>
                      </li>
                   </ul>
                </div>
                <br>
                <br>
                <div>
-                  <h3 class="content-text">Web Crawling</h3>
+                  <h3 class="content-text">Video Transcoding</h3>
                   <ul style="list-style: none;">
-                     <li>Worked on design of scalable web crawler at Roposo, using node.js and various build tools like Apache Kafka, Docker and Mesos cluster. This project was a part of monitisation, enabling our users to search and purchase for curated products.
+                     <li>Worked on design of a scalable video transcoding pipeline at Roposo, based on the FFMPEG, C++, Bash and Python. Exposed customer facing and internal APIs through the JAVA Play framework.
+                     Worked on the following video target formats:
+                     <ol>
+                        <li>WebM (VP8 and VP9)</li>
+                        <li>MPEG-Layer 4 (H.264)</li>
+                        <li>HEVC (H.265)</li>
+                     </ol>
                      </li>
                   </ul>
                </div>
+               <div>
+                     <h3 class="content-text">Audio Processing</h3>
+                     <ul style="list-style: none;">
+                        <li>Worked on many audio processing tasks using FFMPEG, C++, Python, Bash and Java Play framework some of which are listed as below:
+                        <ol>
+                           <li>Audio Normalization - Peak Normalization and EBU R.128 Normalization for Web Applications</li>
+                           <li>Channel Mixing, Channel trimming, Channel boosting</li>
+                           <li>Audio Transcoding: AAC (libfdk-aac) and OGG(libvorbis)</li>
+                        </ol>
+                        </li>
+                     </ul>
+                  </div>
                <br>
                <br>
                <div>
