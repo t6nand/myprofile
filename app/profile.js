@@ -42,8 +42,9 @@ app.get('/displayBlurResults', function(req, res) {
 });
 app.post('/picupload', pictures.type, pictures.saveImageLocallly);
 
-app.listen(4000);
-
-console.log('MyProfile listening on 4000.');
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
 
 module.exports.express;
