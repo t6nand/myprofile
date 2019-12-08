@@ -30,9 +30,6 @@ app.get('/projects', function(req, res) { res.render('projects.ejs'); });
 
 app.get('/contactme', function(req, res) { res.render('contactme.ejs'); });
 
-app.get('/hostedProjects',
-        function(req, res) { res.render('hostedProjects.ejs'); });
-
 app.get('/displayBlurResults', function(req, res) {
   res.render('displayBlurResults.ejs', {
     filePath : pictures.filePath,
